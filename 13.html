@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Abstract: Submission #13</TITLE>
+<STYLE>
+<!--
+body { 
+  MARGIN: 0px;
+  PADDING: 0px;
+  FONT-SIZE: 10pt;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  COLOR: #000000;
+  BACKGROUND-COLOR: #595a6d;
+}
+
+table {
+  border-width: 0px;
+  empty-cells: hide;
+}
+
+/* links */
+a, a:visited {
+  text-decoration: none;
+  color: #4F82CB; 
+  background: inherit;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+a:active {
+  COLOR: #32426c;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  TEXT-DECORATION: none;
+  background: inherit;
+}
+A:hover {
+  COLOR: #32426c;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  TEXT-DECORATION: underline;
+  background: inherit;
+}
+
+H4 {
+  FONT-SIZE: 10pt;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+
+H3 {
+  FONT-SIZE: 11pt;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+
+H2 {
+  FONT-SIZE: 12pt;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+
+H1 {
+  FONT-SIZE: 14pt;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+
+p, td, th, center {
+  font-size: 10pt;
+}
+
+pre {
+  font-size: 8pt; 
+}
+
+tt {
+  font-size: 10pt; 
+}
+
+/* used for floating content */
+.floater {
+float:left;
+}
+-->
+</STYLE>
+
+<BODY BGCOLOR='#ffffff'>
+<TABLE CELLSPACING=0 BORDER=0 WIDTH="100%" align=center height="24">
+<TR>
+<TD VALIGN='MIDDLE' BGCOLOR=#595a6d align=right><FONT COLOR='white'>START Conference Manager &nbsp;&nbsp;&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+
+<div style="width=100%; COLOR: #000000; BACKGROUND-COLOR: #ffffff; margin-left: 10px; margin-right: 10px; padding-left: 10px; padding-right: 10px; padding-top: 15px; padding-bottom: 5px">
+
+<link rel="stylesheet" type="text/css" href="https://softconf.com/acl2026/css/table.css" media="all">
+<script type="text/javascript" src="https://softconf.com/acl2026/javascript/table.js"></script>
+
+<p>
+
+<h2 align="center">CUHKSZ Simultaneous Speech Translation System for IWSLT 2026</h2>
+
+
+  <h3 align=center>Zeyu Yang and Satoshi Nakamura</h3>
+
+
+<p align="center">(Submission #13) </p>
+
+<hr>
+
+
+<h3>Summary</h3>
+
+<blockquote>
+    <p>We present the CUHKSZ Team submission to the IWSLT 2026 Simultaneous Speech Translation evaluation, targeting the main and Extra Context tracks for English→{Chinese, German} on unsegmented speech.</p>
+
+<p>Our system is built upon Qwen3-Omni-30B-A3B, a natively aligned audio-text LLM. Under the Constrained condition, we apply LoRA adaptation exclusively to the LLM. Specifically, we construct syntax-aware, chunk-aligned supervision from existing ASR corpora, using Qwen3-30B-Instruct to synthesize target translations. This enables the model to internalize the simultaneous read/write policy by autonomously predicting <wait> tokens at semantically incomplete boundaries.</p>
+
+<p>With the policy internalized, execution is delegated to a lightweight streaming agent served via vLLM. This agent feeds audio in fixed chunks, manages a bounded dialogue history, and enforces strict emission controls to minimize computation-aware delay. For the sub-track, contextual priors are dynamically injected into the prompt.</p>
+
+<p>On the official dev set, our 0–2 s latency regime submissions achieve 40.5 BLEU (1.95 s) for En→Zh and 27.7 BLEU (1.72 s) for En→De. In the 2–4 s regime, performance scales to 42.1 BLEU (2.16 s) and 30.5 BLEU (2.29 s) respectively.</p> </p>
+</blockquote>
+
+
+<p><h3>Categories</h3>
+<blockquote><table cellspacing=0 cellpadding=0>
+<tr><td align=right>Submission Type:&nbsp;</td>
+<td align=left><em>System Description Paper</em></td></tr>
+
+</table></blockquote>
+<p><h3>Additional Fields</h3>
+<blockquote><table cellspacing=0 cellpadding=0>
+<tr><td>&nbsp;</td><td></td></tr><tr><td colspan=4 align=left valign=top>Check if the first author is a student (Student Author):&nbsp;&nbsp;
+<b>Yes</b></td></tr>
+
+
+</table></blockquote>
+</table>
+
+
+
+
+
+<h3>File(s)</h3>
+
+<blockquote>
+    [<a href="13.pdf">Paper&nbsp;(PDF)</a>]&nbsp;&nbsp; 
+</blockquote>
+
+
+
+<hr>
+
+<p>
+<p align=center>
+
+<small>
+<a href="http://www.softconf.com" target="_blank">START</a> 
+Conference Manager (V2.61.0 - Rev. 7295)
+</small>
+<p>&nbsp;
+</div>
+
+
+</body>
+</html>
